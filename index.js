@@ -16,7 +16,7 @@ app.get("/bikes", (req, res) => {
   const bikesWithImages = bikes.map((bike) => {
     return {
       ...bike,
-      imageUrl: `http://localhost:${port}/bikes/${bike.id}/imagen`, // Configure the URL
+      imageUrl: `https://bikes-api.onrender.com/bikes/${bike.id}/imagen`, // Configure the URL
     };
   });
   res.json(bikesWithImages);
