@@ -21,7 +21,7 @@ app.set("views", __dirname + "/views");
 // Files
 const bikes = require("./products/bikes");
 
-app.get("api/bikes", (req, res) => {
+app.get("/api/bikes", (req, res) => {
   const bikesWithImages = bikes.map((bike) => {
     return {
       ...bike,
@@ -31,7 +31,7 @@ app.get("api/bikes", (req, res) => {
   res.json(bikesWithImages);
 });
 
-app.get("api/bikes/:id/imagen", (req, res) => {
+app.get("/api/bikes/:id/imagen", (req, res) => {
   const { id } = req.params;
   console.log(id);
   const bike = bikes.find((bike) => bike.id === parseInt(id));
