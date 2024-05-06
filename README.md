@@ -6,7 +6,7 @@ API que sirve para un catalogo de bicicletas
 
 - Node.js
 - Javascript
-- HTML 5
+- HTML5
 - CSS3
 - Handlebars
 
