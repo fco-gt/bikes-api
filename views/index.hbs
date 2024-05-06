@@ -1,0 +1,186 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="APIREST De un catalogo de biciletas ficticio"
+    />
+    <meta
+      name="keywords"
+      content="api apirest bicicletas api-bicicletas api-bikes"
+    />
+    <meta name="author" content="FCO-GT" />
+    <link rel="canonical" href="bikes-api.onrender.com" />
+    <title>GT-Bikes</title>
+    <!-- BULMA CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
+    />
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- PRISM CSS -->
+    <link rel="stylesheet" href="/prism.css">
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav
+      class="navbar mx-5"
+      role="navigation"
+      aria-label="navegación principal"
+    >
+      <div class="navbar-brand mt-2 mb-2">
+        <a class="navbar-item is-size-3 has-text-light" href="#">
+          GT-Bikes
+        </a>
+        <a
+          role="button"
+          class="navbar-burger has-text-white"
+          data-target="navMenu"
+          aria-label="menú"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="#" class="navbar-item is-tab">
+            Inicio
+          </a>
+          <a href="/docs" class="navbar-item is_tab">
+            Documentación
+          </a>
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a
+              href="https://github.com/fco-gt/bikes-api"
+              target="_blank"
+              class="button is-primary"
+            >
+              <strong>GitHub</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <main>
+      <section class="hero is-primary">
+        <div class="hero-body has-text-centered">
+          <h1 class="title mb-2">GT-Bikes APIREST</h1>
+          <p class="subtitle">API para un catalogo ficticio de bicicletas</p>
+        </div>
+      </section>
+
+      <section
+        class="section is-flex is-flex-direction-column is-align-items-center is-justify-content-center"
+      >
+        <p class="subtitle is-5">
+          Aquí encontrarás la documentación de la APIREST de GT-Bikes, un
+          catalogo ficticio de bicicletas.
+          <br />
+          Puedes ver la documentación de la API en la sección de
+          <a href="/docs" class="has-text-primary">documentación</a>.
+          <br />
+          También puedes ver el código fuente en
+          <a
+            href="https://github.com/fco-gt/bikes-api"
+            target="_blank"
+            class="has-text-primary"
+          >GitHub</a>.
+        </p>
+        <p class="subtitle">¡Gracias por visitar la API! 🚲</p>
+      </section>
+
+      <section class="hero">
+        <div class="hero-body">
+          <section class="section">
+            <div class="container">
+              <h2 class="title is-5">Ejemplo de la API</h2>
+              <div class="content">
+                <p>Aquí puedes ver un ejemplo de los datos de la
+                  <strong class="has-text-primary">API GT-Bikes:</strong></p>
+                <pre style="border-radius: 10px;"><code>[
+  {
+    "id": 1,
+    "name": "Montaña Master 5000",
+    "description": "La Montaña Master 5000 es una bicicleta diseñada para dominar cualquier sendero Con un cuadro de aluminio ultraligero, suspensión delantera ajustable y frenos de disco hidráulicos, esta bicicleta ofrece un rendimiento excepcional en terrenos desafiantes Sus 27 velocidades garantizan un control total en cualquier situación",
+    "price": 229990,
+    "category": "bicicleta de montaña",
+    "age": "adulto",
+    "stock": 5,
+    "imageUrl": "https://bikes-api.onrender.com/bikes/1/imagen"
+  },
+  {
+    "id": 2,
+    "name": "Montaña Mistress 5000",
+    "description": "La Montaña Mistress 5000 es una bicicleta diseñada para mujeres que buscan dominar cualquier sendero Con un cuadro de aluminio ultraligero, suspensión delantera ajustable y frenos de disco hidráulicos, esta bicicleta ofrece un rendimiento excepcional en terrenos desafiantes Sus 27 velocidades garantizan un control total en cualquier situación",
+    "price": 249990,
+    "category": "bicicleta de montaña",
+    "age": "adulto",
+    "stock": 15,
+    "imageUrl": "https://bikes-api.onrender.com/bikes/2/imagen"
+  },
+  {
+    "id": 3,
+    "name": "Cruiser Classic 2000",
+    "description": " La Cruiser Classic 2000 combina el estilo vintage con la comodidad moderna Equipada con un cuadro de acero resistente, guardabarros cromados y un cómodo sillín de cuero, esta bicicleta es perfecta para los paseos relajados por la ciudad Sus 3 velocidades internas ofrecen una conducción suave y sin esfuerzo",
+    "price": 210990,
+    "category": "bicicleta de paseo",
+    "age": "adulto",
+    "stock": 6,
+    "imageUrl": "https://bikes-api.onrender.com/bikes/3/imagen"
+  },
+  {
+    "id": 4,
+    "name": "Trailblazer Pro XT",
+    "description": "La Trailblazer Pro XT es la elección de los aventureros audaces Con un cuadro de carbono ultraligero, suspensión delantera y frenos de disco hidráulicos de alta gama, esta bicicleta ofrece un rendimiento excepcional en cualquier terreno Sus 29 velocidades proporcionan una amplia gama de opciones para conquistar cualquier ruta",
+    "price": 214990,
+    "category": "bicicleta de montaña",
+    "age": "adulto",
+    "stock": 4,
+    "imageUrl": "https://bikes-api.onrender.com/bikes/4/imagen"
+  },
+  {
+    "id": 5,
+    "name": "Cruiser Bella 2000",
+    "description": "La Cruiser Bella 2000 combina el estilo vintage con la comodidad moderna Equipada con un cuadro de acero resistente, guardabarros cromados y un cómodo sillín de cuero, esta bicicleta es perfecta para los paseos relajados por la ciudad Sus 3 velocidades internas ofrecen una conducción suave y sin esfuerzo",
+    "price": 235990,
+    "category": "bicicleta de paseo",
+    "age": "adulto",
+    "stock": 3,
+    "imageUrl": "https://bikes-api.onrender.com/bikes/5/imagen"
+  },
+  ]</code class="language-javascript"></pre>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>GT-Bikes APIREST</strong> by
+          <a href="" target="_blank" class="has-text-primary">FCO-GT</a>. The source code is licensed under the MIT License.
+        </p>
+      </div>
+    </footer>
+
+    <!-- PRISM JS -->
+    <script src="/js/prism.js"></script>
+  </body>
+</html>

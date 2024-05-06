@@ -3,18 +3,23 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const cors = require("cors");
+const hbs = require("hbs");
 const port = 3001 || process.env.PORT;
 
 // Middlewares
 app.use(express.json());
 app.use(cors());
+app.use(express.static(__dirname + "/public"));
+
+// Router
+app.use("/", require("./router/router"));
+
+// Views
+app.set("view engine", "hbs");
+app.set("views", __dirname + "/views");
 
 // Files
 const bikes = require("./products/bikes");
-
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
 
 app.get("/bikes", (req, res) => {
   const bikesWithImages = bikes.map((bike) => {
@@ -43,5 +48,5 @@ app.get("/bikes/:id/imagen", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`Listening at http://localhost:${port}`);
 });
