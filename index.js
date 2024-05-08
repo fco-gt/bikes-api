@@ -29,7 +29,7 @@ app.get("/api/bikes", (req, res) => {
   const bikesWithImages = bikes.map((bike) => {
     return {
       ...bike,
-      imageUrl: `${URL}/api/${bike.id}/imagen`, // Configure the URL
+      imageUrl: `${URL}/api/bikes/${bike.id}/imagen`, // Configure the URL
     };
   });
   res.json(bikesWithImages);
