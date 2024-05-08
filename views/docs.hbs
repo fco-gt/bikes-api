@@ -1,0 +1,176 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="APIREST De un catalogo de biciletas ficticio"
+    />
+    <meta
+      name="keywords"
+      content="api apirest bicicletas api-bicicletas api-bikes"
+    />
+    <meta name="author" content="FCO-GT" />
+    <link rel="canonical" href="bikes-api.onrender.com" />
+    <title>GT-Bikes</title>
+    <!-- BULMA CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
+    />
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- HIGHLIGHT CSS -->
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav
+      class="navbar mx-5"
+      role="navigation"
+      aria-label="navegación principal"
+    >
+      <div class="navbar-brand mt-2 mb-2">
+        <a class="navbar-item is-size-3 has-text-primary" href="/">
+          GT-Bikes
+        </a>
+        <a
+          role="button"
+          class="navbar-burger has-text-white"
+          data-target="navMenu"
+          aria-label="menú"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="/" class="navbar-item is-tab">
+            Inicio
+          </a>
+          <a href="/docs" class="navbar-item is_tab">
+            Documentación
+          </a>
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a
+              href="https://github.com/fco-gt/bikes-api"
+              target="_blank"
+              class="button is-primary"
+            >
+              <strong>GitHub</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SIDEBAR -->
+    <!-- CONTAINER SIDEBAR Y MAIN -->
+    <div
+      class="container if-flex is-align-items-center is-justify-content-center"
+    >
+      <div class="columns">
+        <!-- SIDEBAR -->
+        <aside class="menu mt-5">
+          <p class="menu-label">General</p>
+          <ul class="menu-list">
+            <li><a href="#informacion">Informacion</a></li>
+            <li><a href="#politica">Politica</a></li>
+            <li><a href="#tecnologias">Tecnologias</a></li>
+          </ul>
+          <p class="menu-label">API</p>
+          <ul class="menu-list">
+            <li><a href="#endpoints">EndPoints</a></li>
+          </ul>
+        </aside>
+        <!-- MAIN -->
+        <main class="container">
+          <section class="section">
+            <h1 class="title has-text-primary">Documentación</h1>
+            <p>
+              En esta sección encontrarás la documentación de la APIREST de
+              GT-Bikes
+            </p>
+
+            <h2
+              class="subtitle has-text-primary mt-5 is-size-3"
+              id="informacion"
+            >Informacion</h2>
+            <p>
+              La APIREST de GT-Bikes es un catalogo ficticio de bicicletas que
+              te permite realizar operaciones CRUD sobre los recursos de la API.
+              Los recursos disponibles basicamente son bicicletas y un poco de
+              informacion de estas. La API esta desarrollada en Node.js y
+              Express.js. Puedes ver el codigo fuente en el repositorio de
+              GitHub.
+            </p>
+
+            <h2
+              class="subtitle has-text-primary mt-5 is-size-3"
+              id="politica"
+            >Politica</h2>
+            <p>
+              La politica de uso de la API es simple, puedes hacer uso de la API
+              para fines educativos, personales o de aprendizaje. No se permite
+              el uso de la API para fines comerciales o de lucro. La API es de
+              uso libre y gratuito.
+              <strong>
+                (NO SE PERMITE EL USO DE LA API PARA FINES DE LUCRO O
+                COMERCIALES, EL DESARROLADOR NO SE HACE RESPONSABLE DEL MAL USO
+                DE LA API POR TERCEROS Y SE RESERVA EL DERECHO DE RETIRAR LA API
+                EN CUALQUIER MOMENTO SIN PREVIO AVISO O MOTIVO ALGUNO)
+              </strong>
+            </p>
+
+            <h2
+              class="subtitle has-text-primary mt-5 is-size-3"
+              id="tecnologias"
+            >Tecnologias</h2>
+            <p>
+              La API esta desarrollada en Node.js y Express.js. La API esta
+              desplegada en Render y el codigo fuente esta en GitHub.
+            </p>
+
+            <h2
+              class="subtitle has-text-primary mt-5 is-size-3"
+              id="endpoints"
+            >EndPoints</h2>
+
+            <h3 class="subtitle has-text-info mt-5 is-size-5">GET /api/bikes</h3>
+            <p>
+              Obtiene todas las bicicletas del catalogo. Devuelve un array con
+              todas las bicicletas.
+            </p>
+
+            <h3 class="subtitle has-text-info mt-5 is-size-5">GET /api/bikes/:id</h3>
+            <p>
+              Obtiene una bicicleta en especifico. Devuelve un objeto con la
+              bicicleta solicitada.
+            </p>
+
+            <h3 class="subtitle has-text-info mt-5 is-size-5">GET
+              /api/bikes/:id/imagen</h3>
+            <p>
+              Obtiene la imagen de una bicicleta en especifico. Devuelve la
+              imagen de la bicicleta solicitada.
+            </p>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- HIGHLIGHT JS -->
+    <script
+      src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"
+    ></script>
+  </body>
+</html>

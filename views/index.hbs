@@ -1,3 +1,5 @@
+
+
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -20,8 +22,7 @@
     />
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="/style.css" />
-    <!-- PRISM CSS -->
-    <link rel="stylesheet" href="/prism.css">
+    <!-- HIGHLIGHT CSS -->
   </head>
   <body>
 
@@ -32,7 +33,7 @@
       aria-label="navegación principal"
     >
       <div class="navbar-brand mt-2 mb-2">
-        <a class="navbar-item is-size-3 has-text-light" href="#">
+        <a class="navbar-item is-size-3 has-text-primary" href="/">
           GT-Bikes
         </a>
         <a
@@ -50,7 +51,7 @@
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a href="#" class="navbar-item is-tab">
+          <a href="/" class="navbar-item is-tab">
             Inicio
           </a>
           <a href="/docs" class="navbar-item is_tab">
@@ -111,7 +112,17 @@
               <div class="content">
                 <p>Aquí puedes ver un ejemplo de los datos de la
                   <strong class="has-text-primary">API GT-Bikes:</strong></p>
-                <pre style="border-radius: 10px;"><code>[
+                  <div class="field has-addons">
+                  <div class="control is-expanded">
+                    <input class="input is-primary is-rounded" type="text" placeholder="https://bikes-api.onrender.com/api/bikes/" readonly={{true}}>
+                  </div>
+                  <div class="control">
+                    <button class="button is-info">
+                      GET
+                    </button>
+                  </div>
+                </div>
+                <pre class="prettyprint lang-js" style="border-radius: 10px;"><code>[
   {
     "id": 1,
     "name": "Montaña Master 5000",
@@ -180,7 +191,7 @@
       </div>
     </footer>
 
-    <!-- PRISM JS -->
-    <script src="/js/prism.js"></script>
+    <!-- HIGHLIGHT JS -->
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   </body>
 </html>

@@ -1,3 +1,6 @@
+// Dotenv
+require("dotenv").config();
+
 // Express
 const express = require("express");
 const path = require("path");
@@ -5,6 +8,7 @@ const app = express();
 const cors = require("cors");
 const hbs = require("hbs");
 const port = 3001 || process.env.PORT;
+const URL = process.env.URL;
 
 // Middlewares
 app.use(express.json());
@@ -25,10 +29,24 @@ app.get("/api/bikes", (req, res) => {
   const bikesWithImages = bikes.map((bike) => {
     return {
       ...bike,
-      imageUrl: `https://bikes-api.onrender.com/api/bikes/${bike.id}/imagen`, // Configure the URL
+      imageUrl: `${URL}${bike.id}/imagen`, // Configure the URL
     };
   });
   res.json(bikesWithImages);
+});
+
+app.get("/api/bikes/:id", (req, res) => {
+  const { id } = req.params;
+  const numId = parseInt(id);
+
+  let bike = bikes.find((b) => b.id === numId);
+  console.log(bike);
+
+  if (bike) {
+    res.json(bike);
+  } else {
+    res.status(404).send("Bike not found");
+  }
 });
 
 app.get("/api/bikes/:id/imagen", (req, res) => {
